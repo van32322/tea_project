@@ -1,0 +1,104 @@
+.navbar{
+    position: relative;
+    z-index: 50;
+}
+.container{
+    -moz-transition: all 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* * width and maxwith are modified */
+  width: 100vw;
+  /* max-width: 1536px; */
+  /* height: 50px; */
+  /* line-height: 50px; */
+  height: 80px;
+  line-height: 80px;
+  /* background: #95a5a6; */
+  background: transparent;
+  position: fixed;
+  top: 0;
+
+  /** update left and add transform property to center the nav*/
+  left: 50%;
+  transform: translateX(-50%);
+
+  /** remove color white -> no need  */
+  /* color: #fff; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+.container.stick {
+  /* height: 50px; */
+  /* line-height: 50px; */
+  height: 80px;
+  line-height: 80px;
+}
+
+.container.stick.visible {
+  /* background-color: #e74c3c; */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+}
+.layer{
+    padding-block: calc(var(--spacing) * 4);
+    padding-inline: calc(var(--spacing) * 4);
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1536px;
+    width: 100%;
+    display: flex;
+}
+.container.stick.hidden {
+  /* top: -50px; */
+  top: -80px;
+}
+.logoImg{
+    width: calc(var(--spacing) * 16);
+    height: calc(var(--spacing) * 16);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    cursor: pointer;
+}
+.logoName{
+    text-transform: capitalize;
+    color: hsl(160, 65%, 17%);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    font-family: var(--font-lobster);
+}
+.nav{
+    display: flex;
+    gap: calc(var(--spacing) * 8);
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    
+}
+.navLink {
+    cursor: pointer;
+    font-family: var(--font-inter);
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+    --tw-leading: 1;
+    line-height: 1;
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+    color: hsl(217, 17%, 40%);
+    text-transform: capitalize;
+}
+.navLink {
+    &:hover {
+        @media (hover: hover) {
+            color: hsl(220, 14%, 12%);
+        }
+    }
+}

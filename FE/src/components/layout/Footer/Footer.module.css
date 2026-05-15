@@ -1,0 +1,14 @@
+.footer{
+    background-color: hsl(160, 73%, 9%);
+
+}
+
+.footerText{
+    text-align: center;
+    margin-top: calc(var(--spacing) * 9);
+        color: color-mix(in oklab, var(--color-white) 50%, transparent);
+    font-family: var(--font-inter);
+    font-size: var(--text-sm);
+    --tw-leading: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 7);
+}
